@@ -49,7 +49,9 @@ Data Recording Days: Most data is recorded from Tuesday to Thursday, which may n
 [Back to Top](#author-emi-ly)
 
 Examine the data, check for NA, and remove duplicates for three main tables: daily_activity, sleep_day and weight:
+
 Step 1: Examine Data, Check for NA, and Remove Duplicates
+
 ```
 # Load necessary libraries
 library(dplyr)
