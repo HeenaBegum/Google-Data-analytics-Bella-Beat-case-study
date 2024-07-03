@@ -1,6 +1,5 @@
 # Google-Data-analytics-Bella-Beat-case-study
 
-# CASE STUDY: Bellabeat Fitness Data Analysis 
 # Author: Heena Begum
 
 # Date: June 27, 2024
