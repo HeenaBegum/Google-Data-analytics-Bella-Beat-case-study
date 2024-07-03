@@ -5,11 +5,8 @@ Date: June 27, 2024
 
 [Tableau Dashboard](https://public.tableau.com/app/profile/heena.begum4134/viz/Bellabeat_17198883873430/Dashboard1?publish=yes)
 
-##### [Tableau Story Presentation to Skateholders](https://public.tableau.com/app/profile/emily.liang7497/viz/BellabeatFitnessDataAnalysis-GoogleDataAnalyticsCapstone/Story1)
 
-#
-
-_The case study follows the six step data analysis process:_
+The case study follows the six step data analysis process:_
 
 ### ❓ [Ask](#1-ask)
 ### 💻 [Prepare](#2-prepare)
