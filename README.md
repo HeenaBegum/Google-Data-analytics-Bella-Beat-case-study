@@ -150,7 +150,7 @@ Additional insight to be awared of is how often user record their data. We can s
 ggplot(data=merged_data, aes(x=Weekday))+
   geom_bar(fill="orchid1")
 ```
-![image]([https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/dailyact.png](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/dailyac.png))
+![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/dailyac.png)
 
 
 ⛔ From weekday's total asleep minutes, we can see the graph look almost **same** as the graph above! We can confirmed that most sleep data is also recorded during Tuesday to Thursday. This raised a question "how comprehensive are the data to form an accurate analysis?"
