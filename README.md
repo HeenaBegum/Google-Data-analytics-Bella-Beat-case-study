@@ -176,6 +176,14 @@ Clean the data to prepare for analysis in 4. Analyze!
 
 
 ### Summary:
+
+Graph variables of interest, check for outliers in the data
+```
+ summary(activity$TotalSteps)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      0    3790    7406    7638   10727   36019
+```
+
 Check min, max, mean, median and any outliers. Avg weight is 135 pounds with BMI of 24 and burn 2050 calories. Avg steps is 10200, max is almost triple that 36000 steps. Users spend on avg 12 hours a day in sedentary minutes, 4 hours lightly active, only half hour in fairly+very active! Users also gets about 7 hour of sleep. 
 ```
 merged_data %>%
