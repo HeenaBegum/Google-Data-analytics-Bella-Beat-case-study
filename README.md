@@ -117,7 +117,7 @@ weight %>%
 
 ```
 Step 5: Investigate Data Recording Distribution
-# Bar graph for daily activity data recording by day of the week
+
 ```
 ggplot(data = daily_activity, aes(x = Weekday)) +
   geom_bar(fill = "steelblue") +
@@ -128,11 +128,11 @@ ggplot(data = daily_activity, aes(x = Weekday)) +
 ```
 
 Step 6: Merge the Tables
-# Merge daily_activity and sleep_day
+
 ```
 merged_activity_sleep <- merge(daily_activity, sleep_day, by = c("Id", "date"), all = TRUE)
 
-# Merge the result with weight
+
 merged_data <- merge(merged_activity_sleep, weight, by = "Id", all = TRUE)
 ```
 Step 7: Clean and Prepare Data for Analysis
