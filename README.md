@@ -225,12 +225,7 @@ plot_ly(percentage, labels = ~level, values = ~minutes, type = 'pie',textpositio
 The American Heart Association and World Health Organization recommend at least 150 minutes of moderate-intensity activity or 75 minutes of vigorous activity, or a combination of both, each week. That means it needs an daily goal of 21.4 minutes of FairlyActiveMinutes or 10.7 minutes of VeryActiveMinutes.
 
 In our dataset, **30 users** met fairly active minutes or very active minutes.
-```
-active_users <- daily_activity %>%
-  filter(FairlyActiveMinutes >= 21.4 | VeryActiveMinutes>=10.7) %>% 
-  group_by(Id) %>% 
-  count(Id) 
-```
+
 
 ### Noticeable Day:
 [Back to Analyze](#4-analyze)
@@ -256,6 +251,7 @@ How active the users are weekly in total steps. Tuesday and Saturdays the users 
 ![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/hourlysteps.png))
 
 ## 5. Share 
+
 
 
 ### 🎨 [Bellabeat Data Analysis Dashboard](https://public.tableau.com/app/profile/heena.begum4134/viz/Bellabeat_17198883873430/Dashboard1?publish=yes)
