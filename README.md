@@ -253,12 +253,8 @@ Let's look at how active the users are per hourly in total steps. From 5PM to 7P
 
 
 How active the users are weekly in total steps. Tuesday and Saturdays the users take the most steps. 
-```
-ggplot(data=merged_data, aes(x=Weekday, y=TotalSteps, fill=Weekday))+ 
-  geom_bar(stat="identity")+
-  ylab("Total Steps")
-```
-![image](https://user-images.githubusercontent.com/62857660/136252217-53d355de-2c25-4185-8e6d-27ba087573ae.png)
+
+![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/hourlysteps.png))
 
 
 
