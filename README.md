@@ -1,5 +1,4 @@
-# Google-Data-analytics-Bella-Beat-case-study
-
+# CASE STUDY: Bellabeat Fitness Data Analysis 
 # Author: Heena Begum
 
 # Date: June 27, 2024
@@ -50,11 +49,25 @@ Data Recording Days: Most data is recorded from Tuesday to Thursday, which may n
 [Back to Top](#author-emi-ly)
 
 Examine the data, check for NA, and remove duplicates for three main tables: daily_activity, sleep_day and weight:
+Step 1: Examine Data, Check for NA, and Remove Duplicates
 ```
+# Load necessary libraries
+library(dplyr)
+library(ggplot2)
+```
+```
+# Check dimensions, NA values, and duplicates for sleep_day
 dim(sleep_day)
 sum(is.na(sleep_day))
 sum(duplicated(sleep_day))
 sleep_day <- sleep_day[!duplicated(sleep_day), ]
+```
+```
+# Check dimensions, NA values, and duplicates for daily_activity
+dim(daily_activity)
+sum(is.na(daily_activity))
+sum(duplicated(daily_activity))
+daily_activity <- daily_activity[!duplicated(daily_activity), ]
 ```
 
 Convert ActivityDate into date format and add a column for day of the week:
@@ -62,15 +75,74 @@ Convert ActivityDate into date format and add a column for day of the week:
 daily_activity <- daily_activity %>% mutate( Weekday = weekdays(as.Date(ActivityDate, "%m/%d/%Y")))
 ```
 
+
 Check to see if we have 30 users using ```n_distinct()```. The dataset has 33 user data from daily activity, 24 from sleep and only 8 from weight. If there is a discrepency such as in the weight table, check to see how the data are recorded. The way the user record the data may give you insight on why there is missing data. 
 ```
-weight %>% 
-  filter(IsManualReport == "True") %>% 
-  group_by(Id) %>% 
-  summarise("Manual Weight Report"=n()) %>%
-  distinct()
+# Check dimensions, NA values, and duplicates for weight
+dim(weight)
+sum(is.na(weight))
+sum(duplicated(weight))
+weight <- weight[!duplicated(weight), ]
  ```
- 
+
+ Step 2: Convert ActivityDate into Date Format and Add Day of the Week
+ ```
+ daily_activity <- daily_activity %>%
+  mutate(ActivityDate = as.Date(ActivityDate, "%m/%d/%Y"),
+         Weekday = weekdays(ActivityDate))
+```
+
+ Step 3: Check Number of Unique User
+ ```
+n_distinct(daily_activity$Id)
+n_distinct(sleep_day$Id)
+n_distinct(weight$Id)
+
+```
+ Step 4: Investigate Discrepancies in Weight Data
+ ```
+ weight %>%
+  filter(IsManualReport == "True") %>%
+  group_by(Id) %>%
+  summarise("Manual Weight Report" = n()) %>%
+  distinct()
+
+weight %>%
+  filter(IsManualReport == "False") %>%
+  group_by(Id) %>%
+  summarise("Automatic Weight Report" = n()) %>%
+  distinct()
+
+```
+Step 5: Investigate Data Recording Distribution
+# Bar graph for daily activity data recording by day of the week
+```
+ggplot(data = daily_activity, aes(x = Weekday)) +
+  geom_bar(fill = "steelblue") +
+  labs(title = "Daily Activity Data Recording by Day of the Week",
+       x = "Day of the Week",
+       y = "Count")
+
+```
+
+Step 6: Merge the Tables
+# Merge daily_activity and sleep_day
+```
+merged_activity_sleep <- merge(daily_activity, sleep_day, by = c("Id", "date"), all = TRUE)
+
+# Merge the result with weight
+merged_data <- merge(merged_activity_sleep, weight, by = "Id", all = TRUE)
+```
+Step 7: Clean and Prepare Data for Analysis
+```
+# Further cleaning if necessary
+# For example, you may want to handle NA values or specific columns
+
+# Display the first few rows of the cleaned and merged data
+head(merged_data)
+```
+
+
 Additional insight to be awared of is how often user record their data. We can see from the ```ggplot()``` bar graph that the data are greatest from Tuesday to Thursday. We need to investigate the data recording distribution. Monday and Friday are both weekdays, why isn't the data recordings as much as the other weekdays? 
 ```
 ggplot(data=merged_data, aes(x=Weekday))+
@@ -89,6 +161,7 @@ merged_data <- merge(merged_activity_sleep, weight, by = c("Id"), all=TRUE)
 ```
 
 Clean the data to prepare for analysis in 4. Analyze!
+
 
 ## 4. Analyze
 [Back to Top](#author-emi-ly)
