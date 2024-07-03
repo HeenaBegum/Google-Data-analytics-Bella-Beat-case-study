@@ -243,7 +243,7 @@ The bar graph shows that there is a jump on Saturday: user spent LESS time in se
 
 Let's look at how active the users are per hourly in total steps. From 5PM to 7PM the users take the most steps. 
 
-![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/hourlysteps.png)
+![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/totalsteps.png)
 
 
 How active the users are weekly in total steps. Tuesday and Saturdays the users take the most steps. 
