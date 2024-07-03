@@ -165,7 +165,7 @@ merged_data <- merge(merged_activity_sleep, weight, by = c("Id"), all=TRUE)
 Clean the data to prepare for analysis in 4. Analyze!
 
 ## 4. Analyze
-[Back to Top](#author-emi-ly)
+
 
 -  [Summary](#summary)
 -  [Active Minutes](#active-minutes)
@@ -202,8 +202,74 @@ merged_data %>%
          ) %>%
   summary()
 ```
-![summary](https://user-images.githubusercontent.com/62857660/136262678-18377ce4-3443-48a4-b108-eba6a273f963.PNG)
+```
+ summary(merged_data)
+      Id              Weekday           TotalSteps.x   TotalDistance.x  TrackerDistance.x
+ Length:12225       Length:12225       Min.   :    0   Min.   : 0.000   Min.   : 0.000   
+ Class :character   Class :character   1st Qu.: 6440   1st Qu.: 4.440   1st Qu.: 4.440   
+ Mode  :character   Mode  :character   Median :10524   Median : 7.090   Median : 7.090   
+                                       Mean   :10623   Mean   : 7.903   Mean   : 7.875   
+                                       3rd Qu.:13239   3rd Qu.: 9.270   3rd Qu.: 8.870   
+                                       Max.   :36019   Max.   :28.030   Max.   :28.030   
+                                       NA's   :2       NA's   :2        NA's   :2        
+ LoggedActivitiesDistance.x VeryActiveDistance.x ModeratelyActiveDistance.x LightActiveDistance.x
+ Min.   :0.0000             Min.   : 0.000       Min.   :0.0000             Min.   : 0.000       
+ 1st Qu.:0.0000             1st Qu.: 0.000       1st Qu.:0.0400             1st Qu.: 3.160       
+ Median :0.0000             Median : 1.350       Median :0.3800             Median : 4.430       
+ Mean   :0.1393             Mean   : 2.876       Mean   :0.6454             Mean   : 4.334       
+ 3rd Qu.:0.0000             3rd Qu.: 3.530       3rd Qu.:0.9600             3rd Qu.: 5.650       
+ Max.   :4.9421             Max.   :21.920       Max.   :6.4800             Max.   :10.710       
+ NA's   :2                  NA's   :2            NA's   :2                  NA's   :2            
+ SedentaryActiveDistance.x VeryActiveMinutes.x FairlyActiveMinutes.x LightlyActiveMinutes.x
+ Min.   :0.00000           Min.   :  0.00      Min.   :  0.00        Min.   :  0.0         
+ 1st Qu.:0.00000           1st Qu.:  0.00      1st Qu.:  1.00        1st Qu.:190.0         
+ Median :0.00000           Median : 21.00      Median : 10.00        Median :229.0         
+ Mean   :0.00409           Mean   : 33.03      Mean   : 14.28        Mean   :226.3         
+ 3rd Qu.:0.00000           3rd Qu.: 58.00      3rd Qu.: 21.00        3rd Qu.:282.0         
+ Max.   :0.11000           Max.   :210.00      Max.   :143.00        Max.   :518.0         
+ NA's   :2                 NA's   :2           NA's   :2             NA's   :2             
+ SedentaryMinutes.x   Calories.x   ActivityDate        TotalSteps.y   TotalDistance.y 
+ Min.   :   0.0     Min.   :   0   Length:12225       Min.   :    0   Min.   : 0.000  
+ 1st Qu.: 689.0     1st Qu.:1947   Class :character   1st Qu.: 6440   1st Qu.: 4.440  
+ Median : 888.0     Median :2174   Mode  :character   Median :10524   Median : 7.090  
+ Mean   : 913.6     Mean   :2462                      Mean   :10623   Mean   : 7.903  
+ 3rd Qu.:1138.0     3rd Qu.:2937                      3rd Qu.:13239   3rd Qu.: 9.270  
+ Max.   :1440.0     Max.   :4900                      Max.   :36019   Max.   :28.030  
+ NA's   :2          NA's   :2                         NA's   :2       NA's   :2       
+ TrackerDistance.y LoggedActivitiesDistance.y VeryActiveDistance.y ModeratelyActiveDistance.y
+ Min.   : 0.000    Min.   :0.0000             Min.   : 0.000       Min.   :0.0000            
+ 1st Qu.: 4.440    1st Qu.:0.0000             1st Qu.: 0.000       1st Qu.:0.0400            
+ Median : 7.090    Median :0.0000             Median : 1.350       Median :0.3800            
+ Mean   : 7.875    Mean   :0.1393             Mean   : 2.876       Mean   :0.6454            
+ 3rd Qu.: 8.870    3rd Qu.:0.0000             3rd Qu.: 3.530       3rd Qu.:0.9600            
+ Max.   :28.030    Max.   :4.9421             Max.   :21.920       Max.   :6.4800            
+ NA's   :2         NA's   :2                  NA's   :2            NA's   :2                 
+ LightActiveDistance.y SedentaryActiveDistance.y VeryActiveMinutes.y FairlyActiveMinutes.y
+ Min.   : 0.000        Min.   :0.00000           Min.   :    0.00    Min.   :      0      
+ 1st Qu.: 3.160        1st Qu.:0.00000           1st Qu.:    0.00    1st Qu.:      1      
+ Median : 4.430        Median :0.00000           Median :   21.00    Median :     10      
+ Mean   : 4.334        Mean   :0.00409           Mean   :   34.66    Mean   :    109      
+ 3rd Qu.: 5.650        3rd Qu.:0.00000           3rd Qu.:   58.00    3rd Qu.:     21      
+ Max.   :10.710        Max.   :0.11000           Max.   :19895.00    Max.   :1145628      
+ NA's   :2             NA's   :2                 NA's   :1                                
+ LightlyActiveMinutes.y SedentaryMinutes.y   Calories.y       Date              WeightKg     
+ Min.   :     0.0       Min.   :     0.0   Min.   :   0   Length:12225       Min.   : 52.60  
+ 1st Qu.:   190.0       1st Qu.:   689.0   1st Qu.:1947   Class :character   1st Qu.: 61.40  
+ Median :   229.0       Median :   888.0   Median :2174   Mode  :character   Median : 62.50  
+ Mean   :   241.1       Mean   :   989.8   Mean   :2462                      Mean   : 72.02  
+ 3rd Qu.:   282.0       3rd Qu.:  1138.0   3rd Qu.:2937                      3rd Qu.: 85.10  
+ Max.   :181244.0       Max.   :931738.0   Max.   :4900                      Max.   :133.50  
+ NA's   :1              NA's   :1          NA's   :2                         NA's   :2921    
+  WeightPounds        Fat             BMI        IsManualReport      LogId          
+ Min.   :116.0   Min.   :22.0    Min.   :21.45   Mode :logical   Min.   :1.460e+12  
+ 1st Qu.:135.4   1st Qu.:22.0    1st Qu.:23.96   FALSE:3605      1st Qu.:1.461e+12  
+ Median :137.8   Median :23.5    Median :24.39   TRUE :5699      Median :1.462e+12  
+ Mean   :158.8   Mean   :23.5    Mean   :25.18   NA's :2921      Mean   :1.462e+12  
+ 3rd Qu.:187.6   3rd Qu.:25.0    3rd Qu.:25.56                   3rd Qu.:1.462e+12  
+ Max.   :294.3   Max.   :25.0    Max.   :47.54                   Max.   :1.463e+12  
+ NA's   :2921    NA's   :11947   NA's   :2921                    NA's   :2921   
 
+```
 ### Active Minutes:
 [Back to Analyze](#4-analyze)
 
