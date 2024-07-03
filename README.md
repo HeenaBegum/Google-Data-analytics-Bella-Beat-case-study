@@ -236,7 +236,6 @@ Sudden spike in the bar shows, On Saturday people are very active and take more 
 
 ![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/veryactive.png)
 
-![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/totalsteps.png)
 
 
 
@@ -249,6 +248,7 @@ Let's look at how active the users are per hourly in total steps. From 5PM to 7P
 
 ![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/hourlysteps.png))
 
+![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/totalsteps.png)
 
 How active the users are weekly in total steps. Tuesday and Saturdays the users take the most steps. 
 
