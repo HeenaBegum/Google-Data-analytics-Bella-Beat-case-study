@@ -30,6 +30,7 @@ Data Source: 30 participants FitBit Fitness Tracker Data from Mobius: https://ww
 
 The dataset has 29 CSV. 
 
+
 Reliability: The data was collected from 30 FitBit users who provided informed consent for the submission of their personal tracker data via Amazon Mechanical Turk.
 Originality: The dataset is derived from original submissions by 30 FitBit users through Amazon Mechanical Turk.
 Comprehensiveness: The dataset provides minute-level output for physical activity, heart rate, and sleep monitoring. It tracks various aspects of user activity and sleep, but the sample size is small and most data is recorded on specific days of the week.
