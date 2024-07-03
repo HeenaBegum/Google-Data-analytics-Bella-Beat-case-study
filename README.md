@@ -232,7 +232,10 @@ In our dataset, **30 users** met fairly active minutes or very active minutes.
 
 The bar graph shows that there is a jump on Saturday: user spent LESS time in sedentary minutes and take MORE steps. Users are out and about on Saturday. 
 
+Sudden spike in the bar shows, On Saturday people are very active and take more steps 
+
 ![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/veryactive.png)
+
 ![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/totalsteps.png)
 
 
