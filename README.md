@@ -16,7 +16,7 @@ _The case study follows the six step data analysis process:_
 ### 🛠 [Process](#3-process)
 ### 📊 [Analyze](#4-analyze)
 ### 📋 [Share](#5-share)
-### 🧗‍♀️ [Act](#6-act)
+### 🧗‍♀️ [Act](#6-Recommendations)
 
 ## Scenario
 Founded in 2013, Bellabeat has rapidly grown into a leading tech-driven wellness company for women. The company offers five core products: the Bellabeat app, Leaf, Time, Spring, and Bellabeat Membership. While already successful, Bellabeat has the potential to expand significantly in the global smart device market. Our team has been tasked with analyzing smart device data to uncover insights into consumer usage patterns. These insights will inform and enhance the company's marketing strategy.
@@ -328,35 +328,20 @@ ggplot(data=merged_data, aes(x=TotalMinutesAsleep, y = Calories, color=TotalMinu
 
 ### 🎨 [Bellabeat Data Analysis Dashboard](https://public.tableau.com/app/profile/heena.begum4134/viz/Bellabeat_17198883873430/Dashboard1?publish=yes)
 
+## 6. Recommendations 
+How can these trends help influence Bellabeat's marketing strategy?
 
+Weight Log Feature: Very few customers utilized the weight log feature, indicating it may not be a significant selling point. Bellabeat should focus on marketing other features such as activity, sleep, and steps tracking. Further research into enhancing the appeal of the weight log feature could potentially make it more marketable.
 
-## 6. Act
+Activity Levels: Our data shows that participants engage the most in "light" activity and have fewer "very active" minutes each day. Bellabeat could introduce a "level up" feature where users earn points based on active minutes. Higher levels of activity could lead to greater rewards, motivating users to increase their activity levels consistently.
 
+Sunday Activity: There is a notable 1000-step decrease on Sundays compared to other days. Bellabeat could send notifications on Sunday mornings setting a step goal for the day, coupled with rewards for achieving a 7-day streak. This approach can help bridge the gap and encourage users to utilize the device throughout the entire week.
 
-Conclusion based on our analysis:
-- Sedentary make up a significant portion, 81% of users daily active minutes. Users spend on avg 12 hours a day in sedentary minutes, 4 hours lightly active, and only half-hour in fairly+very active! 
-- We see the most change on Saturday: users take more steps, burn more calories, and spend less time sedentary. Sunday is the most "lazy" day for users. 
-- 54% of the users who recorded their sleep data spent 55 minutes awake in bed before falling asleep.
-- Users takes the most steps from 5 PM to 7 PM
-Users who are sedentary take minimal steps and burn 1500 to 2500 calories compared to users who are more active, take more steps, but still burn similar calories.
+Peak Activity Times: Data indicates peak device usage around 6 pm, suggesting users are most active after typical work hours. Bellabeat can target working adults with ads focusing on seamless step tracking during busy days. Additionally, reminder notifications around 12 pm and 8 pm could prompt users to increase their activity during lunch breaks and after dinner.
 
+Sleep Tracking: On average, participants are getting less than the CDC recommended 7 hours of sleep per night. Bellabeat should continue marketing the device's sleep tracking feature, emphasizing its utility for users seeking to monitor and improve their sleep patterns. Collaborating with a meditation app or habit tracker could enhance the appeal further.
 
-
-Marketing recommendations to expand globally:
-
-##### 🔢  Obtain more data for an accurate analysis, encouraging users to use a wifi-connected scale instead of manual weight entries. 
-
-##### 🚲  Educational healthy style campaign encourages users to have short active exercises during the week, longer during the weekends, especially on Sunday where we see the lowest steps and most sedentary minutes.
-
-##### 🎁  Educational healthy style campaign can pair with a point-award incentive system. Users completing the whole week's exercise will receive Bellabeat points on products/memberships.
-
-##### 🏃‍♂️ The product, such as Leaf wellness tracker, can beat or vibrate after a prolonged period of sedentary minutes, signaling the user it's time to get active! Similarly, it can also remind the user it's time to sleep after sensing a prolonged awake time in bed.
-
-
-
-
-
-
+These recommendations leverage insights from user data to tailor Bellabeat's marketing strategy effectively, promoting engagement and satisfaction among users
 
 
 
