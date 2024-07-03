@@ -148,9 +148,9 @@ head(merged_data)
 Additional insight to be awared of is how often user record their data. We can see from the ```ggplot()``` bar graph that the data are greatest from Tuesday to Thursday. We need to investigate the data recording distribution. Monday and Friday are both weekdays, why isn't the data recordings as much as the other weekdays? 
 ```
 ggplot(data=merged_data, aes(x=Weekday))+
-  geom_bar(fill="steelblue")
+  geom_bar(fill="orchid1")
 ```
-![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/dailyact.png)
+![image]([https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/dailyact.png](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/dailyac.png))
 
 
 ⛔ From weekday's total asleep minutes, we can see the graph look almost **same** as the graph above! We can confirmed that most sleep data is also recorded during Tuesday to Thursday. This raised a question "how comprehensive are the data to form an accurate analysis?"
@@ -323,10 +323,30 @@ ggplot(data=merged_data, aes(x=TotalMinutesAsleep, y = Calories, color=TotalMinu
 
 
 
+
 ## 5. Share 
 
 
 ### 🎨 [Bellabeat Data Analysis Dashboard](https://public.tableau.com/app/profile/heena.begum4134/viz/Bellabeat_17198883873430/Dashboard1?publish=yes)
+![image](https://github.com/HeenaBegum/Google-Data-analytics-Bella-Beat-case-study/blob/blogheena/Dashboard%201.png)
+
+Based on the descriptive statistical analyses and visualizations, the following trends in smart device usage were observed:
+
+Sedentary Behavior: Sedentary minutes dominated participants' daily routines and remained consistent across the week.
+
+Very Active Minutes: Average "very active minutes" were relatively stable throughout the week, averaging around 20 minutes per day.
+
+Sleep Patterns: Participants tended to sleep the most on Sundays, coinciding with their lowest step count on that day.
+
+Steps Taken: Tuesdays and Saturdays saw the highest average number of steps taken by participants.
+
+Time of Day Steps: The least number of steps were typically taken at 3:00, while 18:00 recorded the highest average step count.
+
+Sleep Duration: On average, participants slept approximately 390 minutes per night, equivalent to 6.5 hours.
+
+Steps and Active Minutes: Users who took more steps per day were more likely to engage in "very active minutes."
+
+These insights suggest opportunities for Bellabeat to tailor marketing strategies, focusing on encouraging more active behaviors and optimizing sleep patterns based on user data patterns throughout the week.
 
 ## 6. Recommendations 
 How can these trends help influence Bellabeat's marketing strategy?
