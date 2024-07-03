@@ -162,7 +162,6 @@ merged_data <- merge(merged_activity_sleep, weight, by = c("Id"), all=TRUE)
 
 Clean the data to prepare for analysis in 4. Analyze!
 
-
 ## 4. Analyze
 [Back to Top](#author-emi-ly)
 
